@@ -15,10 +15,25 @@
     "@cypress/xpath": "^2.0.3",
     "@percy/cypress": "^3.1.2",
     "cypress": "^13.8.1",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.5"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/step_definitions/*.js"
+    "stepDefinitions": "cypress/support/step_definitions/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-ndjson/cucumber-report.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "formatter": "cucumber-json-formatter",
+      "output": "cypress/reports/cucumber-json/cucumber-report.json"
+    }
   }
 }

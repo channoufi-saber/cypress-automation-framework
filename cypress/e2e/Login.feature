@@ -1,3 +1,4 @@
+@regression
 Feature: WebdriverUniversity - Login Page
 
 	Scenario Outline: Validate valid & invalid login credentials
@@ -10,5 +11,5 @@ Feature: WebdriverUniversity - Login Page
 
         Examples:
             | username  | password     | expectedAlertText    |
-            | webdriver | webdriver123 | validation succeeded |
+            | webdriver | webdriver123 | validation succeeded555 |
             | webdriver | Password123  | validation failed    |
